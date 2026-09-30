@@ -15,7 +15,7 @@ cache = redis.Redis(
 
 @app.route("/")
 def home():
-    return "Jenkins Docker CI/CD Application is running!"
+    return "Jenkins Docker CI/CD Application - VERSION 2!"
 
 @app.route("/health")
 def health():
