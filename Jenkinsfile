@@ -51,8 +51,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    docker compose down || true
-                    docker compose up -d --build
+                    IMAGE_TAG=${IMAGE_TAG} \
+                    docker compose up -d --no-build
                 '''
             }
         }
